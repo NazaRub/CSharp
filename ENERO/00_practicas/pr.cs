@@ -20,17 +20,17 @@ void BucleJuego()
             vidaEnemigo = vidaEnemigo - ataqueJugador ;
              Console.WriteLine($"Daño realizado!\nVida actual del enemigo:   {vidaEnemigo}\n") ;
            }
-           if (vidaJugador > 30)
-              {
-            vidaJugador = 30 ;
-              }
 
            if (accion == 2 && pociones > 0 )
              {
-            vidaJugador + 15 ;
+            vidaJugador = vidaJugador + 15 ;
             pociones = pociones - 1 ;
             Console.WriteLine($"Te curaste 15 puntos de vida! vida actual: {vidaJugador}") ;
              }
+                if (vidaJugador > 30)
+              {
+            vidaJugador = 30 ;
+              }
             if (pociones == 0)
         {
             Console.WriteLine($"No te quedan mas pociones!");
